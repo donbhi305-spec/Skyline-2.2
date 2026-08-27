@@ -1,0 +1,2 @@
+[functions.skyline-api]
+verify_jwt = false
