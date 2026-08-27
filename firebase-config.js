@@ -1,8 +1,9 @@
 export const firebaseConfig = {
-  apiKey: 'AIzaSyBfeoxdsxG8kD1_r41D44ktfQ6Fj0Q9U0g',
-  authDomain: 'veltrixa-55dd3.firebaseapp.com',
-  databaseURL: 'https://veltrixa-55dd3-default-rtdb.asia-southeast1.firebasedatabase.app',
-  projectId: 'veltrixa-55dd3',
-  storageBucket: 'veltrixa-55dd3.firebasestorage.app',
-  appId: '1:20010041783:android:010b3ec77e6ae9d6b0e832'
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };

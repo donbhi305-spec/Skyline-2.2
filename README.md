@@ -29,6 +29,10 @@ Do **not** put `SUPABASE_SERVICE_ROLE_KEY` in any browser file, `.env` exposed t
 
 The frontend only contains the Supabase publishable key. The Firebase API key is also a client-side key; authorization comes from the Firebase ID token and the Edge Function verification.
 
+## Frontend environment variables
+
+Create a `.env` file from `.env.example` and add the Firebase Web configuration and Supabase project URL/publishable key. Never put the Supabase service-role key in this file.
+
 ## Run locally
 
 Serve this directory over HTTP/HTTPS; don't open `index.html` directly from `file://`.
@@ -47,4 +51,4 @@ The schema is designed around the existing Skyline paths such as:
 
 `skyline/users`, `skyline/posts`, `skyline/posts-likes`, `skyline/favorite-posts`, `skyline/followers`, `skyline/following`, `skyline/inbox`, `skyline/chats`, `skyline/line-posts`, comments, profile likes and history.
 
-The old Firebase Realtime Database remains untouched by this web build. Existing Android users will continue using their existing backend until their data is migrated and/or the Android app is changed.
+The web app does not use Firebase Realtime Database or Firebase Storage. Firebase is used only for Authentication. Existing Android data in Firebase Realtime Database is not automatically migrated; run the supplied schema and migration process before expecting the web app to show that old data.
